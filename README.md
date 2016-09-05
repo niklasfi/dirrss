@@ -1,4 +1,4 @@
-# feedme-rss feed generation module
+# dirrss feed generation module
 
 ## Setup
 
