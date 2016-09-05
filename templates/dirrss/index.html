@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Available Feeds</title>
+	</head>
+	<body>
+		<ul>
+			{% for f in folders %}
+				<li><a href="{% url 'dirrss_feed' f %}">{{f}}</a></li>
+			{% endfor %}
+		</ul>
+	</body>
+</html>
