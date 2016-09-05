@@ -1,5 +1,11 @@
 # dirrss feed generation module
 
+## What's this about?
+
+dirrss allows you to browse directories in the form of rss streams. For each file an item is created with the file itself as an attachment. If you want to listen for new files in your folder, just point your favourite rss reader at the stream url.
+
+Ok - sounds fine in theory, but what is it _really_ good for? This project was developed as a companion to [radioman](https://github.com/niklasfi/radioman.git), a project allowing you to schedule and record your favourite radio shows. If you place your recordings in your dirrss folder, you can create an rss stream from your recordings and download them to your listening device with a podcatcher. With dirrss listening to radio shows is just as easy as subscribing to a podcast.
+
 ## Setup
 
 ### Existing django project
