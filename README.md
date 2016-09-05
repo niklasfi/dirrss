@@ -1,19 +1,19 @@
 # feedme-rss feed generation module
 
-# Setup
+## Setup
 
-## Existing django project
+### Existing django project
 
 If you already have a django project ready, clone this repository into your project and skip right to the *settings* section.
 
-## New django project
+### New django project
 
 - install [django](https://www.djangoproject.com/) from your favourite package repository
 - `cd` to your desired destination path
 - [create a django project](https://docs.djangoproject.com/en/dev/intro/tutorial01/) to host the dirrss app
 - `cd` into your newly created project and clone dirrss with `git clone https://github.com/niklasfi/dirrss.git`
 
-## settings.py
+### settings.py
 
 For dirrss to work properly, a few settings in your `<project_name>/settings.py` have to be adjusted:
 
@@ -25,11 +25,11 @@ For dirrss to work properly, a few settings in your `<project_name>/settings.py`
 
 - **`SITE_ID`** after you have completed the step *sites setup* make sure to set `SITE_ID` to the primary key of the site you want to use.
 
-## Create media directory
+### Create media directory
 
 Create the directory specified in the `DIRRSS_MEDIA_ROOT` setting. If you are using [radioman](https://github.com/niklasfi/radioman.git) to create your media files, configure its destinationPath to be the same as `DIRRSS_MEDIA_ROOT`.
 
-## urls.py
+### urls.py
 
 Delegate calls to `/dirrss` to the dirrss app. Import `include` with
 
@@ -63,7 +63,7 @@ In total, a minimal `urls.py` may look something like this
 
 Of course, if you want the path to call dirrss to be something else, feel free to change it to your liking.
 
-## Sites setup
+### Sites setup
 
 Create a django site to be used by dirrss to create absolute links to its media files. There are multiple ways to do so. You can use the admin site, for example. In this guide we are using the django shell.
 
@@ -77,6 +77,6 @@ Open the django shell with `python manage.py shell`. In the shell execute an adj
 
 Finally, tell the django project to use your site by adding the printed site id to your `<project_name>/settings.py` file.
 
-## You're done
+### You're done
 
 Start your local webserver with `python manage.py runserver` and visit `http://localhost:8000/dirrss/` or whatever url you have previously configures.
